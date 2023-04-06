@@ -2,7 +2,7 @@
 #include <ctime> 
 using namespace std;
 
-const int maxVal = 100;
+const int maxVal = 30;
 
 class Stack {
     
