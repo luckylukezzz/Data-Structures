@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 class Node {
@@ -87,7 +86,7 @@ public:
         Node* current = head;
 
         while (current != nullptr) {
-            cout << current->data << " ";
+            cout << current->data << " ";//
             current = current->next;
         }
 
