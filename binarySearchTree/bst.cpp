@@ -109,6 +109,21 @@ public:
         }
         return this;
     }
+
+    int minNode(){
+        BST* node = this;
+        while (node->left != nullptr){
+            node = node->left;
+        }
+        return node->key;
+    }
+     int maxNode(){
+        BST* node = this;
+        while (node->right != nullptr){
+            node = node->right;
+        }
+        return node->key;
+    }
 };
 
 int main(){
