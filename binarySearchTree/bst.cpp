@@ -72,12 +72,13 @@ public:
         }
     }
     BST* del(int data){
+        
         if (data < this->key){
             if (this->left!=nullptr){
                 this->left = this->left->del(data);
             }else{
                 cout<<"node not present"<<endl;
-                return this;
+               
             }
         }
         else if (data > this->key){
@@ -85,16 +86,18 @@ public:
                 this->right = this->right->del(data);
             }else{
                 cout<<"node not present"<<endl;
-                return this;
+                
             }   
         }
         else{
-            if (this->left!=nullptr){
+            
+                
+            if (this->left=nullptr){
                 BST* temp = this->right;
                 delete(this);
                 return temp;
             }
-            if (this->right!=nullptr){
+            if (this->right=nullptr){
                 BST* temp = this->left;
                 delete(this);
                 return temp;
@@ -127,16 +130,22 @@ public:
 };
 
 int main(){
-    BST* b=new BST(5);
-    b->insert(6);
-    b->insert(7);
+    BST* b=new BST(7);
+    
+    b->insert(4);
     b->insert(10);
     b->insert(2);
-    b->insert(5);
-    b->insert(8);
-    b->preOrder();
-    cout<<boolalpha<<b->search(5)<<endl;
+    b->insert(1);
+    b->insert(3);
+     b->insert(5);
+      b->insert(6);
+       b->insert(9);
+        b->insert(12);
+         b->insert(11);
+          b->insert(13);
+                     b->preOrder();
+   // cout<<boolalpha<<b->search(5)<<endl;
     b->del(10);
-    b->postOrder();
+    b->preOrder();
     return 0;
 }
