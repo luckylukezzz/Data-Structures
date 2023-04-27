@@ -81,10 +81,10 @@ void preOrder(Node* root ){
 void postOrder(Node* root ){
    
     if (root->left != nullptr){
-        preOrder(root->left);
+        postOrder(root->left);
     }
     if (root->right != nullptr){
-        preOrder(root->right);
+        postOrder(root->right);
     }
     cout<<root->key<<" ";
 
@@ -92,11 +92,11 @@ void postOrder(Node* root ){
 void inOrder(Node* root ){
    
     if (root->left != nullptr){
-        preOrder(root->left);
+        inOrder(root->left);
     }
     cout<<root->key<<" ";
     if (root->right != nullptr){
-        preOrder(root->right);
+        inOrder(root->right);
     }
     
 }
