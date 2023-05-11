@@ -6,16 +6,18 @@ struct HashTable{
     int MAX_LENGTH = 4;
     int MAX_CHAIN_LENGTH = 2;
     LinkedList * password = new LinkedList[MAX_LENGTH];
+
     bool isFull(){
         bool full = true;
-        int count = 0;
         for (int i = 0; i < MAX_LENGTH; i++){
             if(password[i].head == NULL){
                 full = false;
+                break;
             }
         }
         return full;
     }
+    
     int hashfunc(string user_name){
         int sum = 0;
         int hash = 0;
